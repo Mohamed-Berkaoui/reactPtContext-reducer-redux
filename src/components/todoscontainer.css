@@ -1,0 +1,60 @@
+.todos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    height: 80px;
+    border: 3px solid rgba(0, 0, 255, 0.415);
+    border-radius: 5px;
+    padding:  0 30px;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    background-color: rgba(245, 245, 220, 0.63);
+}
+.todo div{
+    display: flex;
+    gap: 10px;
+}
+ button{
+    width: 150px;
+    height: 45px;
+    border: none;
+    background-color: rgb(156, 85, 223);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-todo{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 30px;
+align-items: center ;
+}
+.add-todo div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 400px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+
+}
+.add-todo div input{
+    height: 50px;
+    width: 80%;
+
+}

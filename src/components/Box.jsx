@@ -2,14 +2,12 @@ import React, { useContext } from "react";
 import { todosStore } from "../App";
 
 function Box({ todo }) {
-    const {setTodosState}=useContext(todosStore)
+    const {dispatch}=useContext(todosStore)
     function handleUpdate(){
-        setTodosState(function(state){return state.map(element=>element.id==todo.id? {...element,status:element.status=="done"?"pending":"done"}:element)})
+        dispatch({type:"UPDATE_TODO",payload: todo})
     }
     function handleDelete(){
-        setTodosState(function(state){
-            return state.filter(element=>element.id==todo.id?false:true)
-        })
+        dispatch({type:"DELETE_TODO",payload: todo})
     }
   return (
     <div className="todo">

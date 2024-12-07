@@ -1,14 +1,14 @@
 import React, { useContext, useRef } from 'react'
-import { todosStore } from '../App'
+import { addTodoAction, todosStore } from '../App'
+
+
 
 function AddTodo() {
     const referance=useRef()
-    const {setTodosState}=useContext(todosStore)
+    const {dispatch}=useContext(todosStore)
     function handleAddTodo(){
         var todo={task:referance.current.value,status:"pending",id:Math.floor(Math.random()*10)}
-        setTodosState(function(state){
-            return [...state,todo]
-        })
+      dispatch(addTodoAction(todo))
     referance.current.value=""
     }
   return (
